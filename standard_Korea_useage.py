@@ -7,4 +7,7 @@ g = Goose({'stopwords_class':StopWordsKorean})
 
 article = g.extract(url=url)
 
-print(article.cleaned_text[:150])
+print("Title: ", article.title)
+print("Publish date: ", article.publish_date)
+print("Authors: ", article.authors)
+print("Cleaned text: ", article.cleaned_text)
