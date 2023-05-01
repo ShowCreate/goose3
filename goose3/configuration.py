@@ -153,6 +153,7 @@ class AuthorPattern:
 KNOWN_AUTHOR_PATTERNS = [
     AuthorPattern(attr="itemprop", value="author", subpattern=AuthorPattern(attr="itemprop", value="name")),
     AuthorPattern(attr="name", value="author", content="content"),
+    AuthorPattern(attr="class", value="name"),
 ]
 
 
