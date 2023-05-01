@@ -65,7 +65,8 @@ KNOWN_ARTICLE_CONTENT_PATTERNS = [
     ArticleContextPattern(attr="class", value="post-content"),
     ArticleContextPattern(attr="class", value="g-content"),
     ArticleContextPattern(attr="class", value="post-outer"),
-    ArticleContextPattern(tag="article"),
+    ArticleContextPattern(attr="class", value="main_text"),
+    ArticleContextPattern(attr="class", value="news_cont"),
 ]
 
 
@@ -153,7 +154,7 @@ class AuthorPattern:
 KNOWN_AUTHOR_PATTERNS = [
     AuthorPattern(attr="itemprop", value="author", subpattern=AuthorPattern(attr="itemprop", value="name")),
     AuthorPattern(attr="name", value="author", content="content"),
-    AuthorPattern(attr="class", value="name"),
+    AuthorPattern(attr="a", value="kwd", content="content"),
 ]
 
 
