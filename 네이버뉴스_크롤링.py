@@ -20,7 +20,7 @@ url_format = 'https://search.naver.com/search.naver?where=news&sm=tab_pge&query=
 query = '마약' # 키워드 입력
 
 start_page = 1 # 시작 
-end_page = 2 # 끝
+end_page = 1 # 끝
 count = 0
 g = Goose({'stopwords_class':StopWordsKorean})
 
@@ -40,8 +40,9 @@ with open('네이버뉴스_크롤링_결과.txt', 'w', encoding='utf-8') as f:
                 article['text'] = content.cleaned_text[:150]
                 article['authors'] = content.authors
                 count = count + 1
+
                 # 파일에 쓰기
-                f.write(f"Number: {count}째 기사\n")
+                f.write(f"Number: {count}번 째 기사\n")
                 f.write(f"Link: {article['link']}\n")
                 f.write(f"Title: {article['titles']}\n")
                 f.write(f"Date: {article['date']}\n")
